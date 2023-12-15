@@ -237,7 +237,7 @@ def f1(candidatePiars, data):
     recall = TP / (TP + FN)
     f1_score = 2 * ((precision * recall) / (precision + recall))
     
-    return f1_score, precision, recall, TP
+    return f1_score, precision, recall
 
 ### Calculates the f1* score given the found candidate pairs and the dataset
 def f1star(candidatepairs, data):
