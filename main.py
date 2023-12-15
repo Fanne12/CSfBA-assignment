@@ -129,7 +129,7 @@ while i < I:
             fraction_of_comparisons_g[index] += (len(cp)/total_comparisons)
             
             # Store optimal value of threshold T
-            opt_t[index][i] = T_opt    
+            opt_t[index][i-1] = T_opt    
 
             # Store the scores of the evaluation metrics
             metrics_g[0][index] += F1_star_score[0]
