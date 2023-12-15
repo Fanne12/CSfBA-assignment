@@ -82,7 +82,7 @@ for x in t:
     R_select.append(R[BR_t.index(min(BR_t))])
 
 ## Grid for the threshold parameter in the classification step
-param_t = np.arange(0.75, 0.85, 0.02) 
+param_t = np.arange(0.6, 0.9, 0.05) 
 
 ## Lists to store the optimal values of the threshold and the evaluation measures
 opt_t = [[0]*I for k in range(len(R_select))]
