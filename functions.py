@@ -46,12 +46,9 @@ def deleteSingleTitleWords(data: pd.DataFrame):
             allWords.append(word)
     
     wordCount = pd.Series(allWords).value_counts()
-    wordCount.name = "Count"
-    
-    wordCount = wordCount.rename_axis('Word').reset_index()
-    singleWord = wordCount[wordCount['Count'] == 1]
-    
-    for i in singleWord:
+    singlewords = wordCount[wordCount==1].keys()
+       
+    for i in singlewords:
         data["Title"] = data["Title"].str.replace(r'\b{}\b'.format(i), ' ')
     
 
